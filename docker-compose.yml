@@ -1,0 +1,31 @@
+version: "3"
+services:
+  api:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - 8000:8000
+    environment:
+      - DATABASE_HOSTNAME=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_PASSWORD=admin
+      - DATABASE_NAME=fasyapi
+      - DATABASE_USERNAME=postgres 
+      - SECRET_KEY=02s0a3sd1a2sd023asda35ad02asda3w1awf5af4a+f63sd1fasf
+      - ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRY_MINUTES=30
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=Admin
+      - POSTGRES_DB=fasyapi
+
+    volumes:
+      - postgres-dp:/var/lib/postgresql/data
+
+volumes:
+  postgres-dp:
+
+
+      
