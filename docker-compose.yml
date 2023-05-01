@@ -9,7 +9,7 @@ services:
     environment:
       - DATABASE_HOSTNAME=postgres
       - DATABASE_PORT=5432
-      - DATABASE_PASSWORD=admin
+      - DATABASE_PASSWORD=Admin
       - DATABASE_NAME=fasyapi
       - DATABASE_USERNAME=postgres 
       - SECRET_KEY=02s0a3sd1a2sd023asda35ad02asda3w1awf5af4a+f63sd1fasf
